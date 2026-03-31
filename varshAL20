@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Твой Космический Навигатор: 2026 (Лев)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
+        body {
+            color: #e0e7ff;
+            background: #0a0f2c;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        #video-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+-bg video {
+            position: absolute;
+            top: 50%; left: 50%;
+            min 100%; min-height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+        .overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height:100%;
+ background: linear-gradient(135deg, rgba(10,15,44,0.7), rgba(10,15,44,0.95));
+            z-index: -1;
+        }
+        section {
+            max-width: 800px;
+            padding: 3rem 1rem;
+            margin: 2rem 0;
+        }
+        h1 { font-size: 3.5rem; color: #ffd700; text-shadow: 0 0 20px rgba(255,215,0,0.5); }
+        h2 { font-size: 2.5rem; color: #ffd700; margin: 1.5rem 0; }
+        p-size: 1.3rem; line-height: 1.7; margin: 1rem 0; }
+        ul { text-align: left; margin: 1.5rem auto; max-width: 700px; }
+        ul li { margin: 0.8rem 0; padding-left: 1.2rem; position: relative; }
+        ul li::before { content: "•"; color: #ffd700; position: absolute; left: 0; }
+        table { width: 100%; max-width: 700px; margin: 2rem auto; border-collapse: collapse; }
+        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,215,0,0.2); }
+        th { background: rgba(255,215,0,0.15); color: #ffd700; }
+        .btn {
+            background: linear-gradient(45deg, #ffd700, #ff8c00, #ff4500);
+            color: #0a0f2c;
+            border: none;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 1.5rem 0;
+            font-weight: bold;
+        }
+        #audio-btn {
+            position: fixed; top: 20px; right: 20px;
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background:255,215,0,0.2);
+            border: 1px solid rgba(255,215,0,0.4);
+            color: #ffd700;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+<div id="video-bg">
+    <video autoplay muted loop playsinline>
+        <source src="lion_gold_flower.mp4" type="video/mp4">
+    </video>
+</div>
+<div class="overlay"></div>
+<button id="audio-btn">🔊</button>
+
+<!-- БЛОК 1 -->
+<section id="hero">
+    <div style="font-size:6rem;color:#ffd700;">♌</div>
+    <h1>Твой Космический Навигатор: 2026 (Лев)</h1>
+    <p>Год, когда звезды работают на тебя.</p>
+    <p>Ты входишь в 2026 с энергией короля, но обстоятельства диктуют свои правила. Твоя Лагна — Лев, и это время для истинного проявления твоей власти. Готовься к великому путешествию!</p>
+    <button class="btn" onclick="showSection('manifest')">Активировать прогноз</button>
+</section>
+
+<!-- БЛОК 2 -->
+<section id="manifest" style="display:none;">
+    <h2>Год Твоего «Я»</h2>
+    <p>В этом году точка твоего роста (Мунтха) в 9-м доме. Это мощный шанс для расширения горизонтов и духовного роста. Ты — центр своей вселенной, и весь мир будет подстраиваться под твою энергию.</p>
+    <ul>
+        <li><strong>Твоя суперсила:</strong> Врожденный авторитет и харизма.</li>
+        <li><strong>Твоя стратегия:</strong> Решать сложные задачи, становясь опорой для других.</li>
+        <li><strong>Результат:</strong> Укрепление репутации и признание твоих достижений.</li>
+    </ul>
+    <button class="btn" onclick="showSection('career')">Продолжить</button>
+</section>
+
+<!-- БЛОК 3 -->
+<section id="career" style="display:none;">
+    <h2>Твой Пропуск в Высшую Лигу</h2>
+    <div style="font-size:4rem;color:#ffd700;">👑</div>
+    <p>Твой Управитель года — Солнце, и оно в 6-м доме. Это уникальное положение: ты получаешь силу через преодоление трудностей.</p>
+   
+        <li><strong>Блеск в делах:</strong> Твоя репутация будет зависеть от того, как эффективно ты справляешься с кризисами.</li>
+        <listrong>Совет:</strong> Истинный авторитет куется не на праздниках, а в решении сложнейших задач. Разгребай завалы — и станешь легендой.</li>
+    </ul>
+    <button class="btn" onclick="showSection('transformation')">Дальше</button>
+</section>
+
+<!-- БЛОК 4 -->
+<section id="transformation" style="display:none;">
+    <h2>Скрытые Резервы</h2>
+    <div style="font-size:4rem;color:#ff4500;">🔥</div>
+    <p>В 6-м доме (Козерог) собралась критическая масса энергии: Марс (Йога-карака), Венера и Меркурий. Это «спецотряд» для решения самых сложных задач.</p>
+    <ul>
+        <li><strong>Что это значит?</strong> Ты будешь разгребать завалы, но с невероятной пробивной силой.</li>
+        <li><strong>Совет:</strong> Экзальтированный Марс дает внутреннюю ярость и силу. Использ завершения долгостроев.</li>
+        <li><strong>Бонус:</strong> Это положение делает тебя «танком», способным пройти сквозь любые препятствия.</li>
+    </ul>
+    <button class="btn" onclick="showSection('protection')">Продолжить</button>
+</section>
+
+<!-- БЛОК 5 -->
+<section id="protection" style="display:none;">
+    <h2>Под Присмотром Высших Сил</h2>
+    <div style="font-size:4rem;color:#ffd700;">☀️</div>
+    <p>Юпитер (Атма-карака) в 11-м доме — твой персональный проводник к успеху. Его сила (Шад-бала) — 151%!</p>
+    <ul>
+        <li><strong>Выход:</strong> Даже в самые темные моменты тебе будет приходить помощь от друзей и наставников.</li>
+        <li><strong>Идеальное время:</strong> для масштабных проектов и построения долгосрочных планов.</li>
+    </ul>
+    <button class="btn" onclick="showSection('advice')">Завершить</button>
+</section>
+
+<!-- БЛОК 6 -->
+<section id="advice" style="display:none;">
+    <h2>Твой План на 2026</h2>
+    <table>
+        <tr><th>Направление</th><th>Совет на год</th></tr>
+        <tr><td>Финансы</td><td>Деньги придут через связи и крупные организации. Не бойся просить о помощи.</td></tr>
+        <tr><td>Отношения</td><td>Будь осторожен в партнерстве. Не всё то золото, что блестит.</td></tr>
+        <tr><td>Здоровье</td><td>Стеллиум в 6-м доме требует дисциплины. Спорт — лучший способ сбросить напряжение.</td></tr>
+        <tr><td>Удача</td><td>Твоя cила — в служении другим. Реши чужую проблему — и своя исчезнет сама собой.</td></tr>
+    </table>
+    <button class="btn" onclick="showFortune()">Кнопка Удачи 🎯</button>
+    <div id="fortune" style="margin:1.5rem; padding:1.5rem; background:rgba(255,215,0,0.1); border-radius:10px;">Нажми кнопку, чтобы получить космическое сообщение!</div>
+</section>
+
+<script>
+const fortunes = [
+   "🔥 <strong>Энергия Марса:</strong> «Сегодня твоя воля сильнее любых преград. Действуй жестко, но справедливо — экзальтация на твоей стороне!»",
+    "🐘 <strong>Благословение Юпитера:</strong> «Расслабься. Варшеша в 11-м доме уже готовит для тебя подарок. Просто будь открыт новым знакомствам».",
+    "☀️ <strong>Свет Солнца:</strong> «Твоя сила — в служении. Реши чужую проблему, и твоя собственная исчезнет самой собой».",
+    "🌊 <strong>Глубина Луны:</strong> «Тишина — твой лучший союзник сегодня. Уйди вглубь себя, там спрятан ответ на самый важный вопрос».",
+    "🛡️ <strong>Защита Сатурна:</strong> «Терпение — это не ожидание, а умение сохранять спокойствие в бою. Ты под надежной защитой Дхарма-карак».",
+    "💎 <strong>Урок Венеры:</strong> «Красота в деталя. Попробуй найти эстетику в повседневной рутине, и мир заиграет новыми красками».",
+    "🌀 <strong>Импульс Раху:</strong> «Не бойся быть странным. Твои нестандартные решения в партнерстве сегодня принесут плоды».",
+    "🚀 <strong>Взлет Мунтхи:</strong> «Удача любит смелых путешественников. Планируй обучение или поездку — звезды уже пакуют твои чемоданы!»"
+];
+function showSection(id) {
+    document.querySelectorAll('section').forEach(s => s.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+}
+function showFortune() {
+    document.getElementById('fortune').innerHTML = fortunes[Math.floor(Math.random()*fortunes.length)];
+}
+document.getElementById('audio-btn').onclick = () => {
+    const v = document.querySelector('#video-bg video');
+    if (v) {
+        v.muted = !v.muted;
+        document.getElementById('audio-btn').innerText = v.muted ? '🔊' : '🔇';
+    }
+};
+</script>
+</body>
+</html>
